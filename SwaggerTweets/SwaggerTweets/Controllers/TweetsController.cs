@@ -74,13 +74,6 @@ namespace SwaggerTweets.Controllers
             {
                 if (text.Contains("https://"))
                 {
-                    Regex regx = new Regex("https://([\\w+?\\.\\w+])+([a-zA-Z0-9\\~\\!\\@\\#\\$\\%\\^\\&amp;\\*\\(\\)_\\-\\=\\+\\\\\\/\\?\\.\\:\\;\\'\\,]*)?", RegexOptions.IgnoreCase);
-                    MatchCollection mactches = regx.Matches(text);
-                    string result = string.Empty;
-                    foreach (Match match in mactches)
-                    {
-                        result = match.Value;
-                    }
                     int startindex = text.IndexOf("https://");
                     int legth = text.Length;
                     string result1 = text.Substring(startindex, legth - startindex);
